@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+		<style>
+			*{
+				margin:0px;
+				padding:0px;
+			}
+			.box li{
+				list-style: none;
+				width:50px;
+				/*height: 50px;*/
+				text-align: center;
+				line-height: 50px;
+				background: lightskyblue;
+				margin:5px;
+			}
+			.box{
+				width:50%;
+				min-height: 600px;
+				margin:10px auto;
+				border:5px solid orange;
+				
+				/*声明flex容器*/
+				display: -webkit-flex;
+				/*兼容写法*/
+				display: -ms-flexbox;
+				display: -moz-flexbox;
+				display: -o-flexbox;
+				
+				/*子集水平排列,起点左端*/
+				flex-direction: row;
+				/*子集水平反序排列,起点右端*/
+				/*flex-direction: row-reverse;*/
+				/*子集垂直排序,起点上沿*/
+				/*flex-direction: column;*/
+				/*子集垂直反序排列,起点下沿*/
+				/*flex-direction: column-reverse;*/
+				
+				
+				/*元素超出盒子,默认不换行,元素空间缩小*/
+				/*元素默认平分剩余的空间*/
+				/*超出不换行,默认*/
+				flex-wrap:nowrap;
+				/*超出换行*/
+				flex-wrap:wrap;
+				/*超出换行,以第一行在下方*/
+				/*flex-wrap:wrap-reverse;*/
+				
+				/*复合写*/
+				flex-flow:row wrap;
+				
+				
+				/*父级操作子集的水平对齐方式*/
+				/*子集左对齐*/
+				justify-content: flex-start;
+				/*子集右对齐*/
+				/*justify-content: flex-end;*/
+				/*子集居中对齐*/
+				/*justify-content: center;*/
+				/*子集平均分布,nav*/
+				/*justify-content: space-between;*/
+				/*两边留白布局*/
+				/*justify-content: space-around;*/
+				
+				
+				/*项目为一行或一列----父级操作子集的垂直对齐方式，父级加高度*/
+				/*垂直起点对齐*/
+				align-items: flex-start;
+				/*垂直居中对齐*/
+				align-items: center;
+				/*垂直终点对齐*/
+				align-items: flex-end;
+				/*第一行文字基线对齐,元素高度不同的情况,让字体在一条横线上*/
+				/*align-items: baseline;*/
+				/*子集未设置高度或auto,将拉伸满整个容器的高度，设置高度后无法拉伸*/
+				align-items:stretch;
+				
+				
+				/*项目多行或多列,父级操作子集的垂直对齐方式，父级加高度*/
+				/*垂直起点对齐*/
+				align-content: flex-start;
+				/*垂直居中对齐*/
+				align-content: center;
+				/*垂直终点对齐*/
+				align-content: flex-end;
+				/*垂直平均分布*/
+				align-content: space-between;
+				/*垂直两端留白分布*/
+				align-content: space-around;
+			 /*子集未设置高度或auto,将拉伸满整个容器的高度，设置高度后无法拉伸*/
+				align-content: stretch;	
+			}
+		</style>
+	</head>
+	<body>
+		<ul class='box'>
+			<li>1</li>
+			<li>2</li>
+			<li>3</li>
+			<li>4</li>
+			<!--元素超出盒子-->
+			<li>5</li>
+			<li>6</li>
+			<li>7</li>
+			<li>8</li>
+			<li>9</li>
+			<li>10</li>
+			
+			<li>11</li>
+			<li>12</li>
+			<li>13</li>
+			<li>14</li>
+			<li>15</li>
+			<li>16</li>
+		</ul>
+	</body>
+</html>

@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+		<style>
+			*{
+				margin:0px;
+				padding:0px;
+			}
+			.box li{
+				list-style: none;
+				/*width:50px;*/
+				height:50px;
+				text-align: center;
+				line-height: 50px;
+				background: lightskyblue;
+				margin:5px;
+			}
+			.box{
+				width:30%;
+				min-height: 600px;
+				margin:10px auto;
+				border:5px solid orange;
+				
+				display: flex;
+			}
+			
+			/*order:自定义元素的排列顺序,默认是0*/
+			/*.box li:nth-child(4){
+				order:0;
+			}
+			.box li:nth-child(3){
+				order:3;
+			}
+			.box li:nth-child(2){
+				order:2;
+			}
+			.box li:nth-child(1){
+				order:1;
+			}*/
+			
+			/*flex-grow:有空余空间,可设置元素是否放大,默认是0*/
+			/*.box li:nth-child(4){
+				flex-grow:2;
+			}*/
+			
+			/*flex-shrink:空间不足时,可设置元素是否缩小,元素默认是缩小*/
+			/*0,不缩放*/
+			/*1,缩放,默认缩放*/
+			/*.box li:nth-child(4){
+				flex-shrink:0;
+			}*/
+			
+			/*flex-basis:设置元素的固定宽高*/
+			/*width只是当flex-basis没有被设置时的回退选项*/
+			/*空间不足,单独给元素设置flex-basis固定宽高,不起作用,得结合缩放属性*/
+			/*.box li:nth-child(1){
+				flex-shrink: 0;
+				flex-basis:100px;
+			}*/
+			
+			
+			/*flex:1,平分剩余的空间*/
+			/*分配的是父盒子的剩余空间*/
+			.box li{
+				flex: 1;
+			}
+			
+			/*子元素的对齐方式*/
+			.box li:nth-child(1){
+				align-self: flex-start;
+			}
+			.box li:nth-child(2){
+				align-self: center;
+			}
+			.box li:nth-child(3){
+				align-self: flex-end;
+			}
+			.box li:nth-child(4){
+				align-self: baseline;
+			}
+			.box li:nth-child(5){
+				height: auto;
+				align-self:stretch;
+			}
+		</style>
+	</head>
+	<body>
+		<ul class='box'>
+			<li>1</li>
+			<li>2</li>
+			<li>3</li>
+			<li>4</li>
+			<li>5</li>
+<!--			
+			<li>5</li>
+			<li>6</li>
+			<li>7</li>
+			<li>8</li>
+			
+			<li>9</li>
+			<li>10</li>
+			<li>11</li>
+			<li>12</li>-->
+		</ul>
+	</body>
+</html>
